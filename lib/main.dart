@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:house_of_tomorrow/src/service/lang_service.dart';
 import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
 import 'package:provider/provider.dart';
 
@@ -12,6 +13,9 @@ void main() {
       providers: [
         ChangeNotifierProvider(
           create: (context) => ThemeService(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => LangService(),
         ),
       ],
       child: const MyApp(),
@@ -32,6 +36,7 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
+      locale: context.watch<LangService>().locale,
       debugShowCheckedModeBanner: false,
       theme: context.themeService.themeData,
       home: const ShoppingView(),

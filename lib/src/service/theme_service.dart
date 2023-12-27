@@ -21,6 +21,23 @@ class ThemeService with ChangeNotifier {
     }
     notifyListeners();
   }
+
+  ThemeData get themeData {
+    return ThemeData(
+      scaffoldBackgroundColor: theme.color.surface,
+      appBarTheme: AppBarTheme(
+        backgroundColor: theme.color.surface,
+        elevation: 0,
+        centerTitle: false,
+        iconTheme: IconThemeData(
+          color: theme.color.text,
+        ),
+        titleTextStyle: theme.typo.headline2.copyWith(
+          color: theme.color.text,
+        ),
+      ),
+    );
+  }
 }
 
 extension ThemeServiceExt on BuildContext {

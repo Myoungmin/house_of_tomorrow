@@ -36,6 +36,9 @@ class ThemeService with ChangeNotifier {
           color: theme.color.text,
         ),
       ),
+      bottomSheetTheme: const BottomSheetThemeData(
+        backgroundColor: Colors.transparent,
+      ),
     );
   }
 }

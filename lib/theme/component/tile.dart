@@ -20,6 +20,7 @@ class Tile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
+      behavior: HitTestBehavior.translucent,
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Row(

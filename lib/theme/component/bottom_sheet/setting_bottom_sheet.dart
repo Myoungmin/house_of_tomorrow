@@ -13,6 +13,7 @@ class SettingBottomSheet extends StatelessWidget {
     final bool isLightTheme = context.theme.brightness == Brightness.light;
     return BaseBottomSheet(
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           /// Theme Tile
           Tile(

@@ -32,7 +32,7 @@ enum ButtonType {
       case ButtonType.fill:
         return isInactive
             ? context.color.onInactiveContainer
-            : color ?? context.color.onPrimary;
+            : color ?? context.color.primary;
       case ButtonType.flat:
       case ButtonType.outline:
         return color ?? Colors.transparent;

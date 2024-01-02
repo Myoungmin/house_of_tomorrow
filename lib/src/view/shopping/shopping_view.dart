@@ -37,6 +37,12 @@ class _ShoppingViewState extends State<ShoppingView> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    searchProductList();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

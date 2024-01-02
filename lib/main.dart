@@ -6,7 +6,6 @@ import 'package:house_of_tomorrow/util/route_path.dart';
 import 'package:provider/provider.dart';
 
 import 'src/service/theme_service.dart';
-import 'src/view/shopping/shopping_view.dart';
 
 void main() {
   runApp(

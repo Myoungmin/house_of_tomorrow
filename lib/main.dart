@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:house_of_tomorrow/src/service/lang_service.dart';
 import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
+import 'package:house_of_tomorrow/util/route_path.dart';
 import 'package:provider/provider.dart';
 
 import 'src/service/theme_service.dart';
@@ -39,7 +40,8 @@ class MyApp extends StatelessWidget {
       locale: context.watch<LangService>().locale,
       debugShowCheckedModeBanner: false,
       theme: context.themeService.themeData,
-      home: const ShoppingView(),
+      initialRoute: RoutePath.shopping,
+      onGenerateRoute: RoutePath.onGenerateRoute,
     );
   }
 }

@@ -19,8 +19,9 @@ abstract class Toast {
       ),
     );
     overlay.insert(toast);
-    print(toastKey.currentState?.isShow);
-    toastKey.currentState?.isShow = true;
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      toastKey.currentState?.isShow = true;
+    });
 
     /// Remove
     await Future.delayed(duration);

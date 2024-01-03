@@ -36,6 +36,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorKey: navigatorKey,
+      builder: (context, child) {
+        return Overlay(
+          initialEntries: [
+            OverlayEntry(builder: (context) => child!),
+          ],
+        );
+      },
       localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,

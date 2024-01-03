@@ -25,6 +25,8 @@ abstract class Toast {
 
     /// Remove
     await Future.delayed(duration);
+    toastKey.currentState?.isShow = false;
+    await Future.delayed(animDuration);
     toast.remove();
   }
 }
